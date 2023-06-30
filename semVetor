@@ -1,0 +1,32 @@
+///Escreva um programa em C que contenha uma função capaz de receber um número real como parâmetro e retornar a parte inteira e a parte fracionária desse número
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+
+void func_int_frac( float a)
+{
+    int Int;
+    float frac;
+
+    Int = a;
+    frac = a - Int;
+    printf(" parte inteira : %d \n", Int);
+    printf(" parte fracionaria: %f \n", frac);
+
+}
+
+int main()
+{
+    srand(time(NULL));
+    float num;
+
+    printf("funcao para pegar parte inteira e fracionaria do numero\n");
+    num = (rand())/100;
+
+    printf("numero original %f \n", num);
+
+    func_int_frac(num);
+
+    return 0;
+}
